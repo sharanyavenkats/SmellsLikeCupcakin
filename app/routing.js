@@ -2,7 +2,8 @@
 
 var ReactJS = require('react'),
     ReactDOM = require('react-dom'),
-    ReactDOMServer = require('react-dom/server');
+    ReactDOMServer = require('react-dom/server'),
+    ReactBootstrap = require('react-bootstrap');
 
 exports.setup = function (app) {
     app.get('/', function (req, res) {
@@ -10,6 +11,7 @@ exports.setup = function (app) {
         global.React = ReactJS;
         global.ReactDOM = ReactDOM;
         global.ReactDOMServer = ReactDOMServer;
+        global.ReactBootstrap = ReactBootstrap;
         global.window = {};
 
         var PageComponent = require('./frontend/pages/home/home-index.jsx'),

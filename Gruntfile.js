@@ -8,6 +8,7 @@
 // If you want to recursively match all subfolders, use:
 // 'test/spec/**/*.js'
 
+process.env.NODE_PATH = __dirname;
 module.exports = function(grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
                     standalone: 'component'
                 },
                 // these are handled by browserify-shim in package.json
-                exclude: ['react', 'react-dom', 'react-addons-css-transition-group']
+                exclude: ['react', 'react-dom', 'react-addons-css-transition-group', 'react-bootstrap']
             },
             frontend: {
                 options: {
