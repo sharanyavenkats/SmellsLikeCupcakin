@@ -1,6 +1,10 @@
 'use strict';
 
-require('./app/require-jsx').setup();
+// This allows compiling react on server side. 
+require('babel-core/register')({
+    presets: ['es2015', 'react']
+});
+
 var express = require('express'),
     app = express(),
     routing = require('./app/routing.js'),
