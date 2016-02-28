@@ -1,6 +1,16 @@
 'use strict';
 
+import StandardLayout from 'app/frontend/layout/standard-layout.jsx';
+
 module.exports = React.createClass({
+    mixins: [StandardLayout],
+
+    statics: {
+        layoutOptions: {
+            title: 'Home'
+        }
+    },
+
     getInitialState() {
         return {username: 'Sharanya'};
     },
@@ -9,7 +19,7 @@ module.exports = React.createClass({
         console.log(this.state.username);
     },
 
-    render() {
-        return (<div onClick={this.onClick.bind(this)}>{this.state.username}</div>);
+    renderContent() {
+        return (<div onClick={this.onClick}>{this.state.username}</div>);
     }
 });

@@ -1,16 +1,16 @@
 'use strict';
 
-// This allows compiling react on server side. 
+// This allows compiling react on server side.
 require('babel-core/register')({
     presets: ['es2015', 'react']
 });
 
-var express = require('express'),
-    app = express(),
+let express = require('express'),
     routing = require('./app/routing.js'),
-    env = process.env.NODE_ENV || 'development';
+    env = process.env.NODE_ENV || 'development',
+    app = express();
 
-var isDevelopment = 'development' === env;
+let isDevelopment = 'development' === env;
 
 app.set('port', process.env.PORT || 9000);
 app.use(express.static('app/public'));

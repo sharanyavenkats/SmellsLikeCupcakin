@@ -65,7 +65,7 @@ module.exports = function(grunt) {
             },
 
             express: {
-                files:  ['server.js', '<%= yeoman.app %>/routing.js'],
+                files:  ['server.js', '<%= yeoman.app %>/routing.js', '<%=yeoman.app %>/backend/**/*.js'],
                 tasks:  ['express:dev'],
                 options: {
                     // Without this option specified express won't be reloaded
