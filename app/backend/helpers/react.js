@@ -27,4 +27,9 @@ React.sendReact = function(req, res, filename) {
     // render page content
     result = '<!doctype html>' + result;
     res.send(result);
+
+    delete global.React;
+    delete global.ReactDOM;
+    delete global.ReactDOMServer;
+    delete global.ReactBootstrap;
 }

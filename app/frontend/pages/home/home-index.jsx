@@ -11,15 +11,9 @@ module.exports = React.createClass({
         }
     },
 
-    getInitialState() {
-        return {username: 'Sharanya'};
-    },
-
-    onClick() {
-        console.log(this.state.username);
-    },
-
     renderContent() {
-        return (<div onClick={this.onClick}>{this.state.username}</div>);
+        return (
+            <div> HomeContent </div>
+        );
     }
 });

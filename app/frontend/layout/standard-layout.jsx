@@ -1,5 +1,7 @@
 'use strict';
 
+import Header from 'app/frontend/layout/header.jsx';
+
 /**
  * Standard layout mixin.
  */
@@ -13,7 +15,8 @@ module.exports = {
                     '/lib/lodash/lodash.js',
                     '/lib/react/react-with-addons.js',
                     '/lib/react/react-dom.js',
-                    '/lib/react/react-dom-server.js'
+                    '/lib/react/react-dom-server.js',
+                    '/lib/react-bootstrap/react-bootstrap.js'
                 ], options.scripts),
                 styles: options.styles || [],
                 title: options.title
@@ -25,7 +28,8 @@ module.exports = {
     render() {
         return (
             <div className="standard-layout">
-                <div className="container-wrapper">
+                <Header />
+                <div className="container">
                     {this.renderContent()}
                 </div>
             </div>
