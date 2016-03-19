@@ -1,4 +1,6 @@
 node_modules
 *.DS_Store
-app/public/
+app/public/jsx
+app/public/lib
+app/public/css
 test
